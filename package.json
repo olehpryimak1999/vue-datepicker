@@ -47,7 +47,8 @@
     "lint": "run-s lint:style lint:lib",
     "lint:style": "stylelint --fix \"src/**/*.scss\"",
     "lint:lib": "eslint --fix \"src/**\" --ignore-pattern \"src/**/*.scss\"",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "postinstall": "npm run build"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.10.4",
