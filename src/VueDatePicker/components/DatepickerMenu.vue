@@ -131,12 +131,12 @@
                             </TimePicker>
                         </template>
                     </div>
+                    <div class="dp__action_extra" v-if="$slots['action-extra']">
+                        <slot name="action-extra" v-if="$slots['action-extra']" :select-current-date="selectCurrentDate" />
+                    </div>
                 </div>
                 <div class="dp__sidebar_right" v-if="$slots['right-sidebar']">
                     <slot name="right-sidebar" v-bind="sidebarProps" />
-                </div>
-                <div class="dp__action_extra" v-if="$slots['action-extra']">
-                    <slot name="action-extra" v-if="$slots['action-extra']" :select-current-date="selectCurrentDate" />
                 </div>
             </div>
             <ActionRow
